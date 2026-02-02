@@ -24,7 +24,8 @@ function App() {
             die Bedürfnisse von Schülerinnen und Schülern der Mittel- und Oberstufe. Egal ob
             online oder vor Ort – gemeinsam arbeiten wir daran, Verständnis zu schaffen,
             Sicherheit zu gewinnen und die Noten zu verbessern. Melden Sie sich noch heute
-            für eine kostenlose Probestunde an!
+            für eine kostenlose Probestunde an! Das ist der erste Schritt zu mehr Erfolg in
+            der Schule.
           </p>
           <Button/>
         </div>
