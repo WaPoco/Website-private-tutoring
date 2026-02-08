@@ -24,7 +24,7 @@ function App() {
             online oder vor Ort, gemeinsam arbeiten wir daran, Verständnis zu schaffen,
             Sicherheit zu gewinnen und die Noten zu verbessern.
             <br></br>
-            Melden dich noch heute für eine kostenlose Probestunde an!
+            Melde dich noch heute für eine kostenlose Probestunde an!
             Das ist der erste Schritt zu mehr Erfolg in der Schule.
           </p>
           <Button/>
