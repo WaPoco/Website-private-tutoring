@@ -1,7 +1,7 @@
 #root {
   max-width: 100%;
   min-height: 150vh;
-  height: 150vh;
+  height: 200vh;
   margin: 0;
   padding: 0;
   background-image: linear-gradient( 120deg, rgba(243, 238, 229, 0.98), rgba(246, 241, 232, 0.85) );
@@ -111,4 +111,87 @@ h7 .headline-part {
   align-items: flex-start;
   margin: 2rem;
   gap: 4rem;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .menu-bar {
+    gap: 1rem;
+  }
+
+  .menu-bar a,
+  .menu-bar .menu-link {
+    font-size: 0.9rem;
+  }
+
+  .content-section {
+    flex-direction: column;
+    margin: 1rem;
+    gap: 2rem;
+  }
+
+  .content-section .text-section {
+    flex: 1 1 100%;
+  }
+
+  .image-section {
+    flex: 1 1 100%;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .content-section .intro-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
+  }
+
+  .navbar {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .menu-bar {
+    gap: 0.5rem;
+  }
+
+  .menu-bar a,
+  .menu-bar .menu-link {
+    font-size: 0.8rem;
+  }
+
+  .content-section {
+    margin: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .content-section .intro-text {
+    font-size: 1rem;
+  }
 }

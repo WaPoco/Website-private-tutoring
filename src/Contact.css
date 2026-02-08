@@ -92,3 +92,37 @@
 .back-link:hover {
   text-decoration: underline;
 }
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .contact-page {
+    padding: 2rem 1rem;
+  }
+
+  .contact-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-container h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .contact-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

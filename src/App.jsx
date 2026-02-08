@@ -15,17 +15,17 @@ function App() {
       <div className="content-section">
         <div className="text-section">
           <p className="intro-text">
-            Individueller Einzelunterricht fuer Mittel- und Oberstufe - online
-            oder vor Ort. Klar erklaert, sinnvoll geuebt, nachhaltig verstanden.
+            Individueller Einzelunterricht für Mittel- und Oberstufe - online
+            oder vor Ort in Berlin.
           </p>
           <p className="intro-text">
-            Jetzt kostenlose Probestunde vereinbaren und den Unterschied erleben!
             Ich biete Nachhilfe in den Fächern Mathematik und Physik an, abgestimmt auf
-            die Bedürfnisse von Schülerinnen und Schülern der Mittel- und Oberstufe. Egal ob
-            online oder vor Ort – gemeinsam arbeiten wir daran, Verständnis zu schaffen,
-            Sicherheit zu gewinnen und die Noten zu verbessern. Melden Sie sich noch heute
-            für eine kostenlose Probestunde an! Das ist der erste Schritt zu mehr Erfolg in
-            der Schule.
+            die Bedürfnisse von Schülerinnen und Schülern der Mittelstufe bis Oberstufe. Egal ob
+            online oder vor Ort, gemeinsam arbeiten wir daran, Verständnis zu schaffen,
+            Sicherheit zu gewinnen und die Noten zu verbessern.
+            <br></br>
+            Melden dich noch heute für eine kostenlose Probestunde an!
+            Das ist der erste Schritt zu mehr Erfolg in der Schule.
           </p>
           <Button/>
         </div>

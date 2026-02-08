@@ -5,8 +5,9 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    message: ''
+    klasse: '',
+    telefon: '',
+    nachricht: ''
   })
 
   const handleChange = (e) => {
@@ -16,24 +17,28 @@ function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    
-    // Erstelle mailto Link mit den Formulardaten
-    const subject = `Kontaktanfrage von ${formData.name}`
-    const body = `
-Name: ${formData.name}
-Email: ${formData.email}
-Telefon: ${formData.phone}
-
-Nachricht:
-${formData.message}
-    `
-    
-    const mailtoLink = `mailto:deine-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    window.location.href = mailtoLink
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const apiBase = import.meta.env.VITE_API_URL || `${window.location.protocol}//${window.location.hostname}:5000`;
+      const response = await fetch(`${apiBase}/api/booking`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      const data = await response.json()
+      if (response.ok) {
+        alert('Anfrage erfolgreich gesendet!')
+        setFormData({ name: '', email: '', klasse: '', telefon: '', nachricht: '' })
+      } else {
+        alert('Fehler: ' + data.error)
+      }
+    } catch (error) {
+        alert('Fehler beim Senden der Anfrage: ' + error)
+      }
   }
-
   return (
     <div className="contact-page">
       <div className="contact-container">
@@ -66,22 +71,34 @@ ${formData.message}
           </div>
 
           <div className="form-group">
-            <label htmlFor="phone">Telefon</label>
+            <label htmlFor="telefon">Telefon *</label>
             <input
               type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
+              id="telefon"
+              name="telefon"
+              value={formData.telefon}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="klasse">Klasse</label>
+            <input
+              type="text"
+              id="klasse"
+              name="klasse"
+              value={formData.klasse}
               onChange={handleChange}
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="message">Nachricht *</label>
+            <label htmlFor="nachricht">Nachricht *</label>
             <textarea
-              id="message"
-              name="message"
-              value={formData.message}
+              id="nachricht"
+              name="nachricht"
+              value={formData.nachricht}
               onChange={handleChange}
               rows="6"
               required
